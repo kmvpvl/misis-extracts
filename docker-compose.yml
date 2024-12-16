@@ -1,0 +1,12 @@
+services:
+  misis-extracts:
+    container_name: misis-extracts
+    build: ./
+    restart: always
+    env_file:
+      - path: ./.env
+        required: false
+      - path: ./.env.development.local
+        required: false
+    environment:
+      - PORT=8000
